@@ -26,12 +26,12 @@ puts "Il y a #{underscore} underscore dans tous les pseudos"
 
 #Trie la liste de handle par ordre alphabétique.
 sort = journalists.sort
-puts "-" * 10
+puts "-" * 50
 puts "Voici la liste des handle par ordre alphabétique : #{sort}"
 
 #Quels sont les 50 handles les plus courts de ce array ?
 size = journalists.sort_by {|journalist| journalist.length}
-puts "-" * 10
+puts "-" * 50
 puts "Voici la liste des 50 handles les plus courts : #{size[0..49]}"
 
 #Quelle est la position dans l'array de la personne @epenser ?
