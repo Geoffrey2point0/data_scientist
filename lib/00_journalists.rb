@@ -21,8 +21,14 @@ maj = journalists.count { |journalist| journalist[/[A-Z]/]}
 puts "Il y a #{maj} handle qui contiennent au moins une majuscule"
 
 #Combien y a-t-il de underscore _ dans tous les pseudos confondus ?
-underscore = journalists.count { |journalist| journalist[/_/]}
-puts "Il y a #{underscore} underscore dans tous les pseudos"
+#underscore = journalists.count { |journalist| journalist[/_/]}
+#puts "Il y a #{underscore} underscore dans tous les pseudos"
+
+counts = 0
+journalists.each { |journalist|
+    counts += journalist.scan(/_/).length
+}
+puts    "Il y a #{counts} underscores dans tout le tableau"
 
 #Trie la liste de handle par ordre alphabétique.
 sort = journalists.sort
